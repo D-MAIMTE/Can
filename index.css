@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.containeer{
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containeer .product{
+    background-color: transparent;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+    --left: 53%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .containeer .product .soda{
+    width: 250px;
+    background: url(coca.jpg) var(--left) 0%, url(Cantastic-375mlCanTemplate.webp.png) 0px 0px;
+    background-size: auto 100%;
+    aspect-ratio: 2 / 3.2;
+    background-blend-mode: multiply;
+    mask-image: url(Cantastic-375mlCanTemplate.webp.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+    position: absolute;
+    left: 30%;
+ }
+
+ .containeer .product:hover{    
+    --left: -970px;
+ }
+ .containeer .product:hover .soda{
+    left: 10%;
+    background: url(large.png) var(--left) 0, url(Cantastic-375mlCanTemplate.webp.png) 0px 0px;
+    aspect-ratio: 2 / 3.2;
+    background-size: auto 100%;
+ }
